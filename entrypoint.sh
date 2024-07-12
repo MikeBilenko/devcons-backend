@@ -25,3 +25,11 @@ done
 >&2 echo "PostgreSQL is available"
 
 exec "$@"
+
+#python manage.py makemigrations
+
+python manage.py migrate --no-input
+
+python manage.py collectstatic --no-input
+
+gunicorn high_hill.wsgi:application --bind 0.0.0.0:8000
