@@ -1,0 +1,15 @@
+.env
+venv/
+.idea
+/__pycache__/
+**/__pycache__/
+__pycache__/
+alembic/__pycache__/*
+/venv/
+/.tox/
+/.pytest_cache/
+data/
+!logs/__init__.py
+logs/*
+media/
+staticfiles/
