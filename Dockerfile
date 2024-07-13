@@ -11,4 +11,4 @@ RUN chmod +x /entrypoint.sh
 ENV PYTHONUNBUFFERED 1
 #ENTRYPOINT ["/entrypoint.sh"]
 RUN python manage.py collectstatic
-RUN gunicorn src.wsgi:application --bind 0.0.0.0:8000
+CMD ["gunicorn", "src.wsgi:application", "--bind", "0.0.0.0:8000"]
