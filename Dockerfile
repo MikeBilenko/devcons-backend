@@ -9,7 +9,7 @@ COPY entrypoint.sh /entrypoint.sh
 COPY start.sh /start.sh
 RUN chmod +x /entrypoint.sh
 ENV PYTHONUNBUFFERED 1
-ENTRYPOINT ["/entrypoint.sh"]
+#ENTRYPOINT ["/entrypoint.sh"]
 RUN python manage.py migrate
 RUN python manage.py collectstatic
 RUN gunicorn src.wsgi:application --bind 0.0.0.0:8000
