@@ -8,7 +8,7 @@ DEBUG = True
 SECRET_KEY = "django-insecure-z_=#3tsg1fgnm!a5h_ct2p8__v*0f(arl6ul#mjh!a(%$&p*bv"
 
 # SECURITY WARNING: define the correct hosts in production!
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(', ')
 
 CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', default=' ').split()
 CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default=' ').split()
