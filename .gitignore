@@ -1,4 +1,4 @@
-.env
+./.env
 venv/
 .idea
 /__pycache__/
@@ -13,3 +13,4 @@ data/
 logs/*
 media/
 staticfiles/
+.env
