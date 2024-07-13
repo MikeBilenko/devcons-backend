@@ -22,16 +22,16 @@ services:
       - .env
     depends_on:
       - db
-#  ui:
-#    build:
-#      context: ../devcons
-#      dockerfile: ./Dockerfile  # Ensure Dockerfile path is correct relative to context
-#    ports:
-#      - "3000:3000"
-#    depends_on:
-#      - app
-#    env_file:
-#      - ../devcons/.env
+  ui:
+    build:
+      context: ../devcons
+      dockerfile: ./Dockerfile  # Ensure Dockerfile path is correct relative to context
+    ports:
+      - "3000:3000"
+    depends_on:
+      - app
+    env_file:
+      - ../devcons/.env
   nginx:
     container_name: nginx
     build:
